@@ -33,7 +33,7 @@ const emailDelieveryProxy = createProxyMiddleware(emailDelieveryService);
 const socketProxy = createProxyMiddleware(socketService);
 
 app.get('/', (req, res) => res.send('Api Gateway is up and running'));
-app.get('/email-payload-service', emailPayloadProxy);
+app.post('/email-payload-service', emailPayloadProxy);
 app.get('/email-delievery-service', emailDelieveryProxy);
 app.get('/socket-service', socketProxy);
 
