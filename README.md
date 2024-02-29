@@ -1,40 +1,75 @@
-Run necessary container:
-inside root directory
+### Pickles email notification service
+**git clone https://github.com/asadpstu/email-microservice.git**
+
+
+```
+$ cd email-microservice
 $ mv .env.example .env
 $ docker compose up
+```
 
 This command will create independent Kafka environment with kafka UI and Pgresql Database container. These resources have been used in our backend microservices.
 
-node version > 19 (Recommended)
+>node version > 19 (Recommended)
 
-Run Api Gateway: 
+## `Backend Microservice`
+#### `Api gateway`: 
+
+```
 $ cd api-gateway
 $ npm install
 $ npm start
+```
 
-
-Start `service-email-payload` microservice: 
+#### `Hook api microservice`: 
+```
 $ cd service-email-payload
 $ mv .env.example .env
 $ npm install
 $ npm start
+```
 
-
-Start `service-email-socket` microservice: 
+#### `Email delievery and notification microservice`: 
+```
 $ cd service-email-socket
 $ mv .env.example .env
 $ npm install
+```
+#### `Run Migration`
+```
 $ npx prisma init
 $ npx prisma migrate dev --name initial db setup
+```
 
-For running Test
+#### `Run Test`
+```
 $ npm run test
-
-For running the app
+```
+#### `Start service`
+```
 $ npm start
+```
 
-
-Run Frontend:
+#### `Run Frontend`
+```
 $ cd pickles-frontend
 $ npm install
 $ npm run dev
+```
+
+##### Open browser   `http://localhost:3000`
+
+
+##### `Open Postman application` 
+
+Payload: 
+```
+URL: localhost:4000/email-payload-service
+Request-type: POST
+{
+    "subject" : "Test email microservice",
+    "body" : "This is a test email for tesing purpose.",
+    "receiver" : "hm.ashad.zaman@gmail.com"
+}
+```
+
