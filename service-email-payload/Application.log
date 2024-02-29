@@ -1,11 +1,3 @@
 {"level":"info","message":"Payload received: {\"subject\":\"Socket test\",\"body\":\"Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T13:55:35.888Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test\",\"body\":\"Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T13:57:30.350Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test\",\"body\":\"Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:00:07.126Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test in\",\"body\":\"In Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:00:49.771Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test in\",\"body\":\"In Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:05:28.359Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test in\",\"body\":\"In Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:05:58.736Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Socket test in\",\"body\":\"In Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:09:42.250Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Hello\",\"body\":\"Hello world.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:19:32.209Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Hello\",\"body\":\"Hello world.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:19:46.092Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Hello\",\"body\":\"Hello world.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T14:21:41.915Z"}
-{"level":"info","message":"Payload received: {\"subject\":\"Hello\",\"body\":\"Hello world.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T18:08:24.457Z"}
+
+{"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T19:17:54.332Z"}
