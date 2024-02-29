@@ -1,11 +1,7 @@
 import { PrismaClient } from '@prisma/client'
+import { payload, StatusData } from './type';
 
 const prisma = new PrismaClient()
-type payload = {
-    to: string
-    subject: string
-    text: string
-}
 
 export async function save(payload : payload) : Promise<void> {
     await prisma.status.create({
@@ -15,4 +11,12 @@ export async function save(payload : payload) : Promise<void> {
             body : payload.text
          },
     })
+}
+
+export async function getAllStatus(): Promise<StatusData[]> {
+    return await prisma.status.findMany({
+        orderBy: {
+            id: 'desc'
+        }
+    });
 }

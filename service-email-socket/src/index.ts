@@ -4,6 +4,7 @@ import { Server } from 'socket.io';
 import { listen } from './consumer';
 import dotenv from 'dotenv';
 import cors from 'cors'; 
+import { getAllStatus } from './record';
 
 dotenv.config();
 const app = express();
@@ -25,8 +26,13 @@ io.on('connection', (socket) => {
   });
 });
 
-app.get('/email-delivery-service', async (req, res) => {
-  res.send('Email delivery service is up and running.');
+app.get('/heartbit', async (req, res) => {
+  res.sendStatus(200).send("Email delievery service is up.");
+});
+
+app.get('/email-delievery-service', async (req, res) => {
+  const data = await getAllStatus();
+  res.status(200).send(data);
 });
 
 server.listen(port, async () => {
