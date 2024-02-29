@@ -1,4 +1,5 @@
 import { Kafka } from "kafkajs";
+import { sendMail } from "./email";
 const kafka = new Kafka({
     clientId: "send-email",
     brokers: ["localhost:29092"],
@@ -10,12 +11,8 @@ export const listen = async () => {
     await consumer.subscribe({ topic: "send-email", fromBeginning: true });
 
     await consumer.run({
-        eachMessage: async ({ topic, partition, message }) => {
-            console.log("Received: ", {
-                partition,
-                offset: message.offset,
-                value: message.value?.toString(),
-            });
+        eachMessage: async ({ message }) => {
+            sendMail(message.value?.toString());
         },
     });
 }

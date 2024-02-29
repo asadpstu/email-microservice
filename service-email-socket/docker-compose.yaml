@@ -10,3 +10,6 @@ services:
       - .:/usr/app
     environment:
       PORT: ${PORT}
+      EMAIL: ${EMAIL}
+      PASSWORD: ${PASSWORD}
+      DATABASE_URL: ${DATABASE_URL}

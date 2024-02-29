@@ -8,7 +8,7 @@ const kafka = new Kafka({
 export const producer = kafka.producer({
     maxInFlightRequests: 1,
     idempotent: true,
-    transactionalId: "uniqueProducerId",
+    transactionalId: Date.now().toString(),
 });
 
 
