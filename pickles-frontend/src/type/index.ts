@@ -5,4 +5,5 @@ export interface StatusData {
     body: string;
     createdAt: string;
     updatedAt: string;
+    status : boolean;
 }

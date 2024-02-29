@@ -8,7 +8,7 @@ import { getAllStatus } from './record';
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3002;
 
 app.use(cors());
 
@@ -16,11 +16,12 @@ const server = http.createServer(app);
 export const io = new Server(server); 
 
 io.on('connection', (socket) => {
-  console.log('A user connected');
   socket.on('EMAIL_SENT_CONFIRM',(message)=>{
     io.emit('EMAIL_SENT', message)
   })
-  
+  socket.on('NEW_REQUEST',(message)=>{
+    io.emit('NEW_REQUEST_SAVED', message)
+  })
   socket.on('disconnect', () => {
     console.log('User disconnected');
   });
@@ -37,5 +38,5 @@ app.get('/email-delievery-service', async (req, res) => {
 
 server.listen(port, async () => {
   listen().catch(console.error)
-  console.log(`Service B listening at http://localhost:${port}`);
+  console.log(`Email delievery service is listening at http://localhost:${port}`);
 });

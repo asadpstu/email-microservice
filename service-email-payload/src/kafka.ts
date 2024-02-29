@@ -1,8 +1,11 @@
 import { Kafka } from "kafkajs";
+import { logger } from "./logger";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const kafka = new Kafka({
-    clientId: "send-email",
-    brokers: ["localhost:29092"],
+    clientId: `${process.env.CLIENT_ID}`,
+    brokers: [`${process.env.BROKER_URL}`],
 });
 
 export const producer = kafka.producer({
@@ -15,10 +18,11 @@ export const producer = kafka.producer({
 export async function sendPayload(input: string) {
     try {
         await producer.send({
-            topic: "send-email",
-            messages: [{ key: "send-email", value: input }],
+            topic: `${process.env.TOPIC}`,
+            messages: [{ key: `${process.env.TOPIC_KEY}`, value: input }],
         });
     } catch (e) {
-        console.error("Caught Error while sending:", e);
+        logger.info(`Error sending messages ${e}`);
+        throw new Error(`Error sending messages ${e}` )
     }
 }

@@ -12,6 +12,7 @@ model Status {
   receiver   String
   subject    String
   body       String
+  status     Boolean
   createdAt  DateTime    @default(now())
   updatedAt  DateTime    @updatedAt
 }

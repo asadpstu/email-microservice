@@ -25,5 +25,5 @@ app.post('/email-payload-service', (req, res) => {
 
 app.listen(port, async() => {
   await producer.connect();
-  console.log(`Service A listening at http://localhost:${port}`);
+  console.log(`Email payload service is listening at http://localhost:${port}`);
 });

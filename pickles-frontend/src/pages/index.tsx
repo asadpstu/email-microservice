@@ -33,6 +33,12 @@ export default function Home() {
       fetchStatusData();
     });
 
+    socket.on('NEW_REQUEST_SAVED', (msg) => {
+      console.log('Received message by client:', msg);
+      toast(msg)
+      fetchStatusData();
+    });
+
     socket.on("connect_error", async err => {
       console.log(`connect_error due to ${err.message}`)
     })
@@ -56,8 +62,9 @@ export default function Home() {
                         <th className="px-4 py-2">Receiver</th>
                         <th className="px-4 py-2">Subject</th>
                         <th className="px-4 py-2">Body</th>
+                        <th className="px-4 py-2">Status</th>
                         <th className="px-4 py-2">Created At</th>
-                        <th className="px-4 py-2">Updated At</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -67,8 +74,8 @@ export default function Home() {
                             <td className="border px-4 py-2">{status.receiver}</td>
                             <td className="border px-4 py-2">{status.subject}</td>
                             <td className="border px-4 py-2">{status.body}</td>
+                            <td className="border px-4 py-2">{status.status ? 'Sent' : 'In-progress'}</td>
                             <td className="border px-4 py-2">{new Date(status.createdAt).toLocaleString()}</td>
-                            <td className="border px-4 py-2">{new Date(status.updatedAt).toLocaleString()}</td>
                         </tr>
                     ))}
                 </tbody>
