@@ -1,7 +1,7 @@
 ### Pickles email notification service
 #### Application Demo : 
-`https://drive.google.com/file/d/1vmSnmVfunxTmn5WXlZX_b_P93Bqcfu3T/view?usp=sharing`
-`https://drive.google.com/file/d/19RGgTRp2hBcs_l_RmRB4Xot_FSaoiL88/view?usp=sharing`
+###### How to run the application [ `[Watch]`](https://drive.google.com/file/d/1vmSnmVfunxTmn5WXlZX_b_P93Bqcfu3T/view?usp=sharing)
+###### How to test the application [`[Watch]`](https://drive.google.com/file/d/19RGgTRp2hBcs_l_RmRB4Xot_FSaoiL88/view?usp=sharing)
 
 **Clone :  `git clone https://github.com/asadpstu/email-microservice.git`**
 
