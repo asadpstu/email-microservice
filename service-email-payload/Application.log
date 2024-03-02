@@ -1,3 +1,4 @@
 {"level":"info","message":"Payload received: {\"subject\":\"Socket test\",\"body\":\"Socket test through event driven arichitecture.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T13:55:35.888Z"}
 
 {"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T19:17:54.332Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-02T17:52:08.548Z"}
