@@ -1,5 +1,5 @@
-import { payload, StatusData } from './type';
-import { getPrismaClient } from './connection/client';
+import { payload, StatusData } from '../../interface';
+import { getPrismaClient } from '../../connection/client';
 
 const db = getPrismaClient();
 

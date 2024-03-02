@@ -1,5 +1,5 @@
 import { Kafka } from "kafkajs";
-import { sendMail } from "./email";
+import { sendMail } from "../controller/email";
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,7 +15,9 @@ export const listen = async () => {
 
     await consumer.run({
         eachMessage: async ({ message }) => {
-            sendMail(message.value?.toString());
+            if (message && message.value) {
+                sendMail(message.value.toString());
+            }
         },
     });
 }

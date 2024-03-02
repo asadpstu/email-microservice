@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
-import { save, updateStatusById } from './record';
+import { save, updateStatusById } from '../query';
 import {io} from 'socket.io-client';
 dotenv.config();
 
@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-export const sendMail = async (payload: string | undefined) =>{
+export const sendMail = async (payload: string ) =>{
     if (!payload) {
         console.error("No message value provided.");
         return;

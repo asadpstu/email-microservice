@@ -1,5 +1,5 @@
-import { getPrismaClient } from './connection/client';
-import { getAllStatus, save, updateStatusById} from './record';
+import { getPrismaClient } from '../connection/client';
+import { getAllStatus, save, updateStatusById} from '../controller/query';
 
 const prisma = getPrismaClient();
 
@@ -28,3 +28,8 @@ describe('Asynchronous hook API microservice to trigger Email Notifications Test
         expect(data.length).not.toEqual(0);
     })
 })
+
+  
+
+  
+  
