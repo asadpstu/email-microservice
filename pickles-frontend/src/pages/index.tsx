@@ -47,7 +47,6 @@ export default function Home() {
       socket.disconnect();
     };
   }, []);
-  const notify = () => toast("Wow so easy!");
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-10`}
