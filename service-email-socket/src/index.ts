@@ -31,7 +31,7 @@ app.get('/heartbit', async (req: Request, res: Response) => {
   res.status(200).send("Email delivery service is up.");
 });
 
-app.get('/email-delivery-service', async (req: Request, res: Response) => {
+app.get('/email-delievery-service', async (req: Request, res: Response) => {
   const data: any = await getAllStatus();
   res.status(200).send(data);
 });

@@ -2,3 +2,5 @@
 
 {"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-02-29T19:17:54.332Z"}
 {"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-02T17:52:08.548Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T05:27:39.653Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Hello there\",\"body\":\"This is a test Email\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T05:32:20.244Z"}
