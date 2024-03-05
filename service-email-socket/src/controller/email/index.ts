@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
 import { save, updateStatusById } from '../query';
-import {io} from 'socket.io-client';
+import { getSocketIO } from '../../socket.io/socket';
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ export const sendMail = async (payload: string ) =>{
         return;
     }
     try {
-        const socket = io(`${process.env.WEBSOCKET_URL}`,{transports: ['websocket']});
+        const socket = getSocketIO();
         const jsonObject : { receiver : string, subject: string, body: string } = JSON.parse(payload);
         const mailOptions = {
             from: process.env.EMAIL,
@@ -26,24 +26,21 @@ export const sendMail = async (payload: string ) =>{
             subject: jsonObject.subject,
             text: jsonObject.body,
         };
-
-        socket.on("connect", async () => {
-            const createdId = await save({
-                to: jsonObject.receiver,
-                subject: jsonObject.subject,
-                text: jsonObject.body, 
-            })
-            socket.emit('NEW_REQUEST', 'Payload stored into database.')
-            transporter.sendMail(mailOptions, async (error, info) => {
-                if (error) {
-                    console.error('Email sending failed:', error);
-                } else {
-                    await updateStatusById(createdId);
-                    socket.emit('EMAIL_SENT_CONFIRM', 'Email sent successfully.')
-                }
-            });
-          })
+        const createdId = await save({
+            to: jsonObject.receiver,
+            subject: jsonObject.subject,
+            text: jsonObject.body, 
+        });
+        socket.emit('NEW_REQUEST_SAVED', 'Email sent successfully.');
+        transporter.sendMail(mailOptions, async (error, info) => {
+            if (error) {
+                console.error('Email sending failed:', error);
+            } else {
+                await updateStatusById(createdId);
+                socket.emit('EMAIL_SENT', 'Email sent successfully.');
+            }
+        });
     } catch (error) {
         console.error("Error parsing JSON:", error);
     }
-}
+};

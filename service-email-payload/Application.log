@@ -4,3 +4,10 @@
 {"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-02T17:52:08.548Z"}
 {"level":"info","message":"Payload received: {\"subject\":\"Test email microservice\",\"body\":\"This is a test email for testing purpose.\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T05:27:39.653Z"}
 {"level":"info","message":"Payload received: {\"subject\":\"Hello there\",\"body\":\"This is a test Email\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T05:32:20.244Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application demo\",\"body\":\"This is a test Email\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T06:38:58.003Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application demo 2\",\"body\":\"This is a test Email 2\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T06:39:23.814Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application\",\"body\":\"This is a test Email Application demo\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T06:43:01.920Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application\",\"body\":\"This is a test Email Application demo\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T11:21:49.823Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application\",\"body\":\"This is a test Email Application demo\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T11:23:18.517Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application\",\"body\":\"This is a test Email Application demo\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T11:23:23.792Z"}
+{"level":"info","message":"Payload received: {\"subject\":\"Application\",\"body\":\"This is a test Email Application demo\",\"receiver\":\"hm.ashad.zaman@gmail.com\"}","timestamp":"2024-03-05T11:23:41.192Z"}

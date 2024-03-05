@@ -5,6 +5,7 @@ import { listen } from './kafka/consumer';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import { getAllStatus } from './controller/query';
+import { initializeSocketIO } from './socket.io/socket';
 
 dotenv.config();
 const app: express.Application = express();
@@ -13,19 +14,8 @@ const port: number | string = process.env.PORT || 3002;
 app.use(cors());
 
 const server: http.Server = http.createServer(app);
-export const io: Server = new Server(server);
-
-io.on('connection', (socket: Socket) => {
-  socket.on('EMAIL_SENT_CONFIRM', (message: string) => {
-    io.emit('EMAIL_SENT', message);
-  });
-  socket.on('NEW_REQUEST', (message: string) => {
-    io.emit('NEW_REQUEST_SAVED', message);
-  });
-  socket.on('disconnect', () => {
-    console.log('User disconnected');
-  });
-});
+const io: Server = new Server(server);
+initializeSocketIO(io);
 
 app.get('/heartbit', async (req: Request, res: Response) => {
   res.status(200).send("Email delivery service is up.");
