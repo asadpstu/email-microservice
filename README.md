@@ -1,4 +1,4 @@
-### Pickles email notification service
+###  Email notification service
 #### Application Demo : 
 ###### How to run the application [ `[Watch]`](https://drive.google.com/file/d/1vmSnmVfunxTmn5WXlZX_b_P93Bqcfu3T/view?usp=sharing)
 ###### How to test the application [`[Watch]`](https://drive.google.com/file/d/19RGgTRp2hBcs_l_RmRB4Xot_FSaoiL88/view?usp=sharing)
@@ -82,11 +82,8 @@ Request-type: POST
 ```
 
 #### `Compromise and Shortcut`
->I didn't use Redux because due to socket activity, I was pulling data from backend service instantly. I thought, I would be nicer for the code reviwer if i keep it simple as frontend task was an additional task(good to have).
-
->I wrote 2 integration test. I didn't wrote email service unit/integration test, due to this functionality use socket connection also. 
+>I didn't use Redux because due to socket activity.
 
 >Router hasn't been used, due to application having only 2 endpoints.
 
->Not much error handling cases has been written to keep the project simple and to the point as instructed in "Technical Takeaway Task" document. 
 
